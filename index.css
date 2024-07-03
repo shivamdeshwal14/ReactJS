@@ -128,3 +128,13 @@
     margin-bottom: 0;
     background-color: greenyellow;
 }
+.button-filter{
+    margin-left: 180px;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: rgb(193, 171, 132);
+    font-size: 15px;
+    padding: 2px;
+    cursor: pointer;
+}   
