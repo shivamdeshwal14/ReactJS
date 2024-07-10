@@ -137,4 +137,9 @@
     font-size: 15px;
     padding: 2px;
     cursor: pointer;
-}   
+} 
+.corousle{
+    background-color: blueviolet;
+    margin:0 180px;
+    height: 200px;
+}  

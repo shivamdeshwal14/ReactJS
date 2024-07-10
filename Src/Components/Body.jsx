@@ -1,10 +1,26 @@
 import RestaurantCard from "./RestaurantCard";
 import Footer from "./Footer";
 import resList from "../utils/mockdata";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Corousel } from "./Corousel";
 const Body=()=>{
+useEffect(()=>{
+fetchData();
+},[]);
 
-let [listofRestro,setListofRestro]=useState( resList)
+const fetchData= async()=>{
+  const data= await fetch(
+    " https://www.swiggy.com/dapi/restaurants/list/v5?lat=30.73390&lng=76.78890&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+  );
+  const json=await data.json();
+  console.log(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
+  setListofRestro(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants)
+}
+
+
+
+let [listofRestro,setListofRestro]=useState([]);
+
 // it is a  array distructuring
 // const arr=useState(resList);
 // const[listofRestro,setListofRestro]=arr;
@@ -12,6 +28,7 @@ let [listofRestro,setListofRestro]=useState( resList)
 // const setListOfRestro=arr[1]
  return(
         <div className="body">
+          <Corousel/>
             <button className="button-filter" 
             onClick={()=>{
               console.log(listofRestro);
@@ -24,8 +41,7 @@ let [listofRestro,setListofRestro]=useState( resList)
             <h2 className="heading2-top">Top restaurants in Mohali</h2>
             <div className="res-container">
            {
-           listofRestro.map((restaurant) =><RestaurantCard key={restaurant.card.card.info.id} resdata={restaurant}/>
-
+           listofRestro.map((restaurant,idx) =><RestaurantCard key={idx} resdata={restaurant}/>
            )}            
             </div>
             <Footer/>
