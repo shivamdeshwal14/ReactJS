@@ -2,12 +2,12 @@
     display: flex;
     justify-content: space-between;
     position: sticky;
-   background-color: white;
+   background-color: #fbf9f9;
     top: 0;
    
 }
 .body{
-    background-color: #fbf9f9;
+    background-color: white;
 }
 .logo-container{
     display: flex;
@@ -138,8 +138,21 @@
     padding: 2px;
     cursor: pointer;
 } 
-.corousle{
-    background-color: blueviolet;
+
+.widget-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow:hidden;
+    background-color: #ffff;
     margin:0 180px;
     height: 200px;
-}  
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.widget-image{
+    height: 160px;
+    width: 150px;
+    border-radius: 75px;
+    margin-left: 20px;
+}

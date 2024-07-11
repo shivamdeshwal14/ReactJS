@@ -16,7 +16,16 @@ normal JS utility function written by facebook Developers have its on specific u
 useState()-- generate state variable
 useEffect
 
+ it is a  array distructuring
+ const arr=useState(resList);
+const[listofRestro,setListofRestro]=arr;
+const listofRestro=arr[0];
+const setListOfRestro=arr[1]
+
 whenever the state variale updates or state is changes
 react rerenders its components
 
 UseEffect hook-
+
+
+

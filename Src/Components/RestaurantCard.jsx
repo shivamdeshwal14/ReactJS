@@ -1,7 +1,7 @@
 import {CDN_URL} from "../utils/constansts";
 const RestaurantCard=(props)=>{
     const {resdata}=props;
-    console.log(resdata.info.cloudinaryImageId);
+    
     
     return(
         <div className="res-card">
