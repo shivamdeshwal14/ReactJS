@@ -1,9 +1,9 @@
 import RestaurantCard from "./RestaurantCard";
 import Footer from "./Footer";
-import resList from "../utils/mockdata";
 import { useEffect, useState } from "react";
 
 import { Widget } from "./Widget";
+import Shimmer from "./Shimmer";
 const Body=()=>{
 useEffect(()=>{
 fetchData();
@@ -16,18 +16,24 @@ const fetchData= async()=>{
   const json=await data.json();
   // console.log(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
   // console.log(json.data.cards[0].card.card.gridElements.infoWithStyle.info);
-  setListofRestro(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants)
-  setWidgetList(json.data.cards[0].card.card.gridElements.infoWithStyle.info)
+  setListofRestro(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+  setWidgetList(json?.data?.cards[0]?.card?.card?.gridElements?.infoWithStyle?.info)
 }
 
 
 
 let [listofRestro,setListofRestro]=useState([]);
 let[widgetList,setWidgetList]=useState([]);
-console.log(widgetList);
+
+// conditional rendering
+// if(listofRestro.length===0) {
+//   return  <Shimmer/>
+
+// }
 
 
- return(
+
+ return listofRestro.length===0 ? <Shimmer/> :(
         <div className="body">
              <h2 className="heading2-top">What's on your mind?</h2>
           <div className="widget-container">

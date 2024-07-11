@@ -29,3 +29,16 @@ UseEffect hook-
 
 
 
+optional chaining
+json?.data?.cards[0]?.card?.card?.gridElements?.infoWithStyle?.info
+
+Shimmer UI-Loading fake UI before 
+actual data fetched and actual UI loaded
+
+<!-- condtional Rendering -->
+
+rendering based on condition  example-Shimmer UI
+
+
+
+

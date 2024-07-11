@@ -155,4 +155,35 @@
     width: 150px;
     border-radius: 75px;
     margin-left: 20px;
+    cursor: pointer;
 }
+.shimmer-widgets{
+    display: flex;
+    background-color: white;
+    margin:0 180px;
+    height: 200px;
+    margin-top: 80px;
+    margin-bottom: 5px;
+
+}
+.shimmer-widgets-image{
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    margin-left: 20px;
+   background-color: #f0f0f0;
+}
+.shimmer-card-container{
+    display: flex;
+    justify-content: center;
+    margin: 0 150;
+    flex-wrap: wrap ;
+}
+.shimmer-card{
+    width: 280;
+    height: 400px;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+}
+
