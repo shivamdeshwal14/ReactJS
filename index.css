@@ -32,6 +32,15 @@
     list-style: none;
     
 }
+.login-btn{
+  background-color: #fbf9f9;  
+  height: 20px;
+  padding: 0 20px;
+  margin-top: 24px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
 .nav-items>ul>li{
    padding: 10px;
     margin: 10px;
@@ -129,12 +138,10 @@
     background-color: greenyellow;
 }
 .button-filter{
-    margin-left: 180px;
-    width: 100px;
-    height: 40px;
+    
+ 
     border-radius: 10px;
-    background-color: rgb(193, 171, 132);
-    font-size: 15px;
+   
     padding: 2px;
     cursor: pointer;
 } 

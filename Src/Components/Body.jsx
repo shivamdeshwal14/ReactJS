@@ -18,18 +18,18 @@ const fetchData= async()=>{
   // console.log(json.data.cards[0].card.card.gridElements.infoWithStyle.info);
   setListofRestro(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
   setWidgetList(json?.data?.cards[0]?.card?.card?.gridElements?.infoWithStyle?.info)
-}
+  setSearchData(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+  }
 
 
 
 let [listofRestro,setListofRestro]=useState([]);
 let[widgetList,setWidgetList]=useState([]);
+const [searchText,setSearchText]=useState("");
+const[searchedData,setSearchData]=useState([]);
 
-// conditional rendering
-// if(listofRestro.length===0) {
-//   return  <Shimmer/>
 
-// }
+
 
 
 
@@ -43,23 +43,42 @@ let[widgetList,setWidgetList]=useState([]);
            
         )}
         </div>
-            {/* <button className="button-filter" 
+        <div className="search">
+          <input 
+          className="search-box"
+          type="text" 
+          value={searchText} 
+          onChange={(e)=>{
+          setSearchText(e.target.value)
+          }}  />
+          <button className="search-btn" onClick={()=>{
+            console.log(searchText);
+            let filtered=listofRestro.filter(
+              (res)=>res.info.name.toLowerCase().includes(searchText.toLowerCase()));
+              // setListofRestro(filtered);
+              setSearchData(filtered);
+             
+
+
+          }}>Search </button>
+             <button className="button-filter" 
             onClick={()=>{
               console.log(listofRestro);
               const filteredList=listofRestro.filter(
                         (res)=> res.info.avgRating>4.5
                     );
                   setListofRestro(filteredList)
-            }}
-          >Top rated Restro</button> */}
+            }}>Top rated Restro</button>
+        </div>
+          
             <h2 className="heading2-top">Top restaurants in Mohali</h2>
             <div className="res-container">
            {
-           listofRestro.map((restaurant,idx) =><RestaurantCard key={idx} resdata={restaurant}/>
+           searchedData.map((restaurant,idx) =><RestaurantCard key={idx} resdata={restaurant}/>
            )}            
             </div>
             <Footer/>
         </div>
-    )
+  )
 }
 export default Body;

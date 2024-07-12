@@ -41,4 +41,16 @@ rendering based on condition  example-Shimmer UI
 
 
 
+const [btnName,setBtnName]=useState("Logout");
+
+we can change const variable using useState?
+how?
+when we update value react update this value and call the header function
+again
+render component again and treat btnName as new variable
+
+
+whenever the state variable updates react triggers a reconcilation cycle
+or rerender the whole component
+
 
