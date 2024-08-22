@@ -1,0 +1,33 @@
+.food-name-card{
+    font-weight: bold;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: rgb(84, 84, 84);
+}
+.food-price-card{
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: -20;
+}
+.food-rating-card{
+    color:darkgreen;
+    font-weight: bold;
+}
+.food-rating-cuising{
+    color:gray;
+}
+
+.food-image{
+   
+    width: 30%;
+    height: 200px;
+   
+   
+}
+.menu-card-img{
+    border: 2px solid orange;
+    border-radius: 15px;
+    width: 100%;
+    height: 80%;
+}

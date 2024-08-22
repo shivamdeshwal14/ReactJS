@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { LOGO_URL } from "../utils/constansts";
+import { Link } from "react-router-dom";
 export const Header=()=>{
     // var btnName="Login"
     function onclick(){
@@ -10,9 +11,11 @@ export const Header=()=>{
     }
 
     const [btnName,setBtnName]=useState("Logout");
-    console.log("Header render");
+   
     // whole header component rerendered after clicking on button
-    
+    useEffect(()=>{
+        // console.log("UseEffect Called");
+    },[btnName])
     return (
         <div className="header">
                 <div className="logo-container">
@@ -23,9 +26,9 @@ export const Header=()=>{
                 <div className="nav-items">
                     <ul>
                         
-                        <li>Search</li>
-                        <li>Offers</li>
-                        <li>Help</li>
+                        <li ><Link to="/about">About us</Link></li>
+                        <li><Link to="/contact">Contact us</Link></li>
+                        <li><Link  to="/">Home</Link></li>
                         <li>Sign in</li>
                         <li>cart</li>
                         <button onClick={onclick} className="login-btn">{btnName}</button>

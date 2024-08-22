@@ -12,3 +12,4 @@ export const WIDGET_URL="https://media-assets.swiggy.com/swiggy/image/upload/fl_
 // ERROR 
 // export default LOGO_URL;
 //  USE NAMED EXPORT
+export const MENU_API="https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=30.73390&lng=76.78890&restaurantId="

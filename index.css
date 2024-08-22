@@ -194,3 +194,124 @@
     background-color: #f0f0f0;
 }
 
+
+/* Menu CSS */
+.main-div-menu{    
+    margin: 0 400px;
+}
+.order-type-div-menu{
+    margin-top: 60px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+.online-btn-menu{
+    background-color: white;
+    font-size: 50px;
+    font-weight: bold;
+    border-style: none;
+    font-size: 30px;
+    margin-left: 20px;
+  
+    /* text-decoration-style:solid; */
+
+}
+.dine-btn-menu{
+    background-color: white;
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 20px;
+    border: none;
+
+}
+.div-resdetails-menu{
+   
+    border: 2px solid rgb(125, 123, 123);
+    height: 200px;
+    /* width:90%; */
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 30px;
+    box-shadow:10px 10px 5px #c8c5c5;
+    padding: 10px; 
+
+}
+.resdetails-rating{
+    font-weight: bold;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.resdetails-cuisine{
+   color: red;
+   font-weight: bold;
+   font-size: 18px;
+}
+.offer-card-menu{
+    width: 200px;
+    height: 80px;
+    border: 2px solid black;
+    border-radius: 30px;
+    margin: 10px;
+}
+.div-deals-menu{
+    display: flex;
+    
+}
+.menu-topPickup{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu-card{
+    /* background-color: green; */
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    height: 200px;
+}
+.food-details{
+    width: 70%;
+}
+
+.div-search-menu{
+display: flex;
+justify-content: center;
+}
+.search-input-menu{
+    width: 80%;
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: medium;
+}
+.search-button-menu{
+    /* width: 20%; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+
+
+.headings{
+    font-weight: bold;
+    font-size:25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.menu-link
+{
+text-decoration: none;
+color: black;
+}
+
+/* separator for each menu card */
+.separator{
+    border: none;
+    border-top: 2px solid black;
+    margin: 20px 0;
+}
