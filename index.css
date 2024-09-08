@@ -315,3 +315,8 @@ color: black;
     border-top: 2px solid black;
     margin: 20px 0;
 }
+
+.aboutus-user-div{
+    border: 2px solid black;
+    margin-top: 20px;
+}

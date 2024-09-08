@@ -96,3 +96,8 @@ SPAC-Single page application via client side routing
 
 React implents client side routing
 
+
+
+
+React Lifecyle diagram
+https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
